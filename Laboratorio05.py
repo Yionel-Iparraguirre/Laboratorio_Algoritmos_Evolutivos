@@ -49,7 +49,6 @@ import random
 # --- Cargar datos ---
 file_path = r'C:\Users\yolog\OneDrive\Escritorio\ACTIVIDADES\ALGORITMOS EVOLUTIVOS\LAB 05\Datasets.xlsx'
 df = pd.read_excel(file_path, sheet_name='MentorAvailability')  # Ajusta nombre si difiere
-
 # --- Preparación ---
 slot_cols = [col for col in df.columns if col.startswith('Slot')]
 bloques_disponibles = [(i, i+1) for i in range(len(slot_cols)-1)]
@@ -96,4 +95,6 @@ if __name__ == "__main__":
     print(f"Total de choques: {total_choques}")
     for i, (slot_a, slot_b) in enumerate(asignacion_final):
         print(f"{df.loc[i, 'MentorID']}: Slot{slot_a+1} y Slot{slot_b+1}")
-    print("==========================================")
+print("==========================================")
+print("EJERCICIO 03 - USANDO EL DATASET LABDISTANCES")
+print("==========================================")
